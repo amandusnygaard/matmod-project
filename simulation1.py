@@ -91,18 +91,20 @@ else:
     print(f"Percent reacted reached: {np.sum(gridR)/total_receptors*100}")
 
 
-print(np.min(gridN[:,:,-1]))
 plt.figure()
+plt.title("Concentration of N at reaction layer")
 plt.imshow(gridN[:,:,-1], vmin = 0, vmax = np.max(gridN[:,:,-1]))
 plt.colorbar()
 plt.show()
 
 plt.figure()
+plt.title("Concentration of R at reaction layer")
 plt.imshow(gridR, vmin = 0, vmax = cR0)
 plt.colorbar()
 plt.show()
 
 plt.figure()
+plt.title("Concentration of R-N at reaction layer")
 plt.imshow(gridRN, vmin = 0, vmax = cR0)
 plt.colorbar()
 plt.show()
